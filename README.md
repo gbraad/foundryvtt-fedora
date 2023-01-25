@@ -7,9 +7,10 @@ Foundry VTT
 -----------
 
   1. download archive
-  2. `unzip [archive].zip -d /opt/foundryvtt`
-  3. `mkdir ~/foundrydata`
-  4. add systemd unit
+  1. `unzip [archive].zip -d /opt/foundryvtt`
+  1. `mkdir ~/foundrydata`
+  1. `dnf install nodejs`
+  1. add systemd unit
 
 `/etc/systemd/system/foundryvtt.service`
 ```
