@@ -8,7 +8,7 @@ Foundry VTT
 
   1. download archive
   1. `unzip [archive].zip -d /opt/foundryvtt`
-  1. `mkdir ~/foundrydata`
+  1. `mkdir ~/foundrydata` (optional: if run as systen service)
   1. `dnf install nodejs`
 
 
@@ -62,3 +62,10 @@ $ systemctl --user status foundryvtt
 ```
 
 Note: for the dekstop application the path is `"/home/[username]/.local/share/FoundryVTT"`
+
+
+### After install
+
+You can now start the Foundry VTT setup and registration by navigating to the server as http://[ip]:30000.
+
+Note: it is suggested to run this behind a proxy, like Apache, nginx or caddy, so you do not expose the node service directly to the Internet. An alternative that I use is Tailscale (or Zerotier) to only share the server on a shared virtual network.
