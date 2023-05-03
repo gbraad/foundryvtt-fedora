@@ -15,7 +15,7 @@ Foundry VTT
 ### Install as a system service
 
 `/etc/systemd/system/foundryvtt.service`
-```
+```ini
 [Unit]
 Description=Foundry VTT service
 After=network.target
@@ -32,7 +32,7 @@ ExecStart=/usr/bin/env node /opt/foundryvtt/resources/app/main.js --dataPath=/ho
 WantedBy=multi-user.target
 ```
 
-```
+```shell
 $ systemctl enable foundryvtt
 $ systemctl start foundryvtt
 ```
@@ -40,12 +40,12 @@ $ systemctl start foundryvtt
 
 ### Install as a user service
 
-```
+```shell
 $ loginctl enable-linger [username]
 ```
 
 `~/.config/systemd/user/foundryvtt.service`
-```
+```ini
 [Unit]
 Description=Foundry VTT service
 
@@ -56,7 +56,7 @@ RestartSec=1
 ExecStart=/usr/bin/env node /opt/foundryvtt/resources/app/main.js --dataPath=/home/[username]/.local/share/FoundryVTT
 ```
 
-```
+```shell
 $ systemctl --user start foundryvtt
 $ systemctl --user status foundryvtt
 ```
